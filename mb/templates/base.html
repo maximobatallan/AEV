@@ -1,0 +1,156 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Servicios Informaticos</title>
+      <!-- favicon -->
+      <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- fontawesome css -->
+      <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+      <!-- fontawesome css -->
+      <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+      <!-- owl carousel css -->
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <!-- owl carousel theme css -->
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <!-- lightbox css -->
+      <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+      <!-- slicknav css -->
+      <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+      <!-- animate css -->
+      <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+      <!-- main css -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- responsive css -->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- jquery js -->
+      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+      
+      
+   </head>
+
+    <body>
+        <!--   header area start   -->
+      <div class="header-area">
+    
+           <div class="support-nav-area">
+            
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-6">
+                     <div class="logo-wrapper">
+                        <div class="logo-wrapper-inner">
+          
+                           <a href="#"><img src="{% static 'img/logoprueba2.png' %}" alt=""></a>
+                         
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-9 col-6 position-lg-relative position-static">
+                     <div class="support-bar">
+                        <div class="row">
+                           <div class="offset-xl-4 col-xl-8 offset-2 col-10">
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <div class="support-info">
+                                       <div class="left-content"><i class="flaticon-call"></i></div>
+                                       <div class="right-content">
+                                          <div class="right-content-inner">
+                                             <h5>Contactanos</h5>
+                                             <p>+ 549 2392-7033</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4">
+                                    <div class="support-info">
+                                       <div class="left-content"><i class="flaticon-email"></i></div>
+                                       <div class="right-content">
+                                          <h5>Mail</h5>
+                                          <p>aev@aev.com </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4">
+                                    <a href="#" class="boxed-btn"><span>Contactanos</span></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="navbar-area">
+                        <div class="row">
+                           <div class="col-lg-9 d-lg-block d-none">
+                              <nav class="main-menu" id="mainMenu">
+                                 <ul>
+                                    <li>
+                                        <a href="/">Inicio</a>
+                                        
+                                     </li>
+                                    <li class="dropdown">
+                                        
+                                        <a href="#">Servicios</a>
+                                        <ul>
+                                          
+                                         
+                                         
+ 
+                                           <li><a href="#" >Busqueda de Clientes</a></li>
+                                           <li><a href="#" >Asistentes Virtuales</a></li>
+                                           <li><a href="#" >Gestión de la Información</a></li>
+                                           <li><a href="#" >Desarrollos Personalizados</a></li>
+                                           
+                                          
+                                        </ul>
+                                     </li>
+                                    
+                                    <li>
+                                       <a href="#">Acerca de AEV</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contacto</a>
+                                     </li>
+                                    
+                                    
+                                 </ul>
+                              </nav>
+                           </div>
+                           <div class="col-lg-3 col-12 position-lg-relative position-static">
+                              <div id="mobileMenu"></div>
+                              <ul class="search-cart-area">
+                               
+                                <li>
+                                    <a href="https://www.linkedin.com/in/maximo-batallan-9a2508103/" target="_blank">LinkedIn</a>
+                                 </li>
+                                
+                                
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+
+ 
+   
+
+        {% block content %}
+
+
+         
+        
+   
+        {% endblock %}
+    </body>
+</html>

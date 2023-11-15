@@ -1,0 +1,115 @@
+<body>
+      <div class="header-area home-3">
+         <div class="info-bar">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6">
+                     <div class="contact-infos">
+                        <div class="email">
+                           <div  class="icon-wrapper"><i class="flaticon-call"></i></div>
+                           <a href="https://wa.me/5491123965421">+549 112396 5421</a>
+                        </div>
+                        <div class="phone">
+                           <div class="icon-wrapper"><i class="flaticon-email"></i></div>
+                           <a href="mailto:maximobatallan@mbassets.net?subject=Consulta%20o%20sugerencia&body=Hola%20MBASSETS, quisiera consultarle acerca de:%0D%0A%0D%0A">maximobatallan@mbassets.net</a>
+                        
+                         
+                        </div>
+                     </div>
+                     <div class="contact-infos">
+                        
+                     </div>
+                     
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="right-content">
+                        <ul class="social-links">
+                           
+                              
+                           <li><a href="https://www.linkedin.com/in/maximo-batallan-9a2508103/"><i class="fab fa-linkedin-in"></i></a></li>
+                           
+                           
+                        </ul>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="support-nav-area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-6">
+                     <div class="logo-wrapper">
+                        <div class="logo-wrapper-inner">
+                           <a href="{% url 'index' %}"><img src="{% static 'img/logo-3.png' %}" alt=""></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-9 col-6 position-static">
+                     <div class="navbar-area">
+                        <div class="row">
+                           <div class="col-12 position-static">
+                              <nav class="main-menu" id="mainMenuHome3">
+                                 <ul>
+                                                                        <li>
+                                       <a href="{% url 'index' %}">Inicio</a>
+                                    </li>
+                                    
+
+                                    <li class="dropdown">
+                                       <a href="#">Perfil de Riesgo</a>
+                                       <ul>
+                                          <li><a href="{% url 'perfil' 'bajo' %}">Perfil de bajo riesgo</a></li>
+                                          <li><a href="{% url 'perfil' 'medio' %}">Perfil de riesgo moderado</a></li>
+                                          <li><a href="{% url 'perfil' 'alto' %}">Perfil de riesgo alto</a></li>
+                                         
+                                       </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                       <a href="#">Herramientas</a>
+                                       <ul>
+                                          <li><a href="{% url 'candlestick-chart' 'meta' %}">Analisis de Stocks</a></li>
+                                          <li><a href="{% url 'portafolio-optimo' %}">Portafolio Optimo</a></li>
+                                          <li><a href="{% url 'zscore' 'meta' %}">New Tool - Altman - Z Score</a></li>
+                                       </ul>
+                                    </li>
+
+
+                                   <!-- <li class="dropdown">
+                                       <a href="#">Noticias</a>
+                                       <ul>
+                                          <li><a href="#">Educativo</a></li>
+                                          <li><a href="#">Indices</a></li>
+                                          <li><a href="#">Mercados Bursatiles</a></li>
+                                          <li><a href="#">Criptomercado</a></li>
+                                          <li><a href="#">informacion de valor</a></li>
+                                       </ul>
+                                    </li> -->
+
+
+
+                                    <li class="dropdown">
+                                       <a href="{% url 'perfil' '405' %}">Test de Aversión Free!</a>
+                                       <ul>
+                                          <li><a href="{% url 'perfil' '405' %}">¡Realizar Test de Aversión en 5 minutos!</a></li>
+
+                                       </ul>
+                                    </li>
+                              </nav>
+                              <div id="mobileMenuHome3"></div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--   header area end   -->
+      {% block content %}{% endblock %}
+      {% include 'footer.html' %}
+   </body>
+</html>
