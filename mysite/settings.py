@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app']
+
+CSRF_COOKIE_SECURE = False
 
 # FORM SUBMISSION
 # Comment out the following line and place your railway URL, and your production URL in the array.
@@ -41,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mb',
 ]
 
 MIDDLEWARE = [
@@ -81,11 +86,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '*f21g*2-C364dg*36ecEcb22CDGEE1g*',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '14815',
     }
 }
 
@@ -125,10 +130,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'notificaciondepaginaweb@gmail.com'
+EMAIL_HOST_PASSWORD = 'iddaknkbspmdhanl'
