@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
+from .models import formulario
 
 
 # Create your views here.
@@ -8,19 +10,48 @@ def home(request):
     context = 'river'
     return render(request, "home.html", {'context': context})
 
-def sendmail(request):
-    if request.method == 'POST':
-        mail = request.POST.get('mail')
-    asunto= 'Confirmación de Compra'
-    cuerpo = 'Gracias por tu compra. Hemos enviado un correo de confirmación a tu dirección: ' + 'correo_destinatario'
-    mensaje = f'{cuerpo}Si no recibes el correo, por favor comunícate con nosotros por WhatsApp al número +123456789.'
-    cel = '11-2394-1223'
+def send_user_data_email(user_data):
+    subject = 'Nuevo usuario registrado'
+    message = f'Se ha registrado un nuevo usuario con los siguientes datos:\n\n{user_data}'
     
-    subject = asunto
-    message = mensaje
+
     from_email = 'notificaciondepaginaweb@gmail.com'
     recipient_list = ['notificaciondepaginaweb@gmail.com','maximobatallan@gmail.com']
-
-    correo= 'correo@correo.com'
-    
     send_mail(subject, message, from_email, recipient_list)
+
+
+@csrf_exempt
+def save_formulario(request):
+    
+
+    nombre = request.POST.get('nombre')
+
+    telefono = request.POST.get('telefono')
+    email = request.POST.get('email')
+    texto = request.POST.get('texto')
+
+    formulario1 = formulario(nombre=nombre, telefono=telefono, mail=email, texto=texto)
+    formulario1.save()
+    user_data = f"nombre: {nombre} telefono: {telefono} texto: {texto}"
+    send_user_data_email(user_data)
+    
+    
+    
+    return render(request, 'index.html')
+
+
+def asistentevirtual(request):    
+    
+    return render(request, 'asistentevirtual.html')
+
+def desarrollospersonalizados(request):    
+    
+    return render(request, 'desarrollospersonalizados.html')
+
+def exposicionenlinea(request):    
+    
+    return render(request, 'exposicionenlinea.html')
+
+def gestiondelainformacion(request):    
+    
+    return render(request, 'gestiondelainformacion.html')
