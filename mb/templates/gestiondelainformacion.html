@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static%}
+{% block head %}
+    {{ block.super }}
+    
+    <!-- easyzoom css -->
+    <link rel="stylesheet" href="{% static 'css/easyzoom.css' %}">
+      <!-- slicknav css -->
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    
+    {% endblock %}
+       
+
+
+        {% block content %}
+   
+   <body>
+     
+
+     <!--  service details section start  -->
+     <div class="service-details-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-xl-7 col-lg-8">
+                 <div class="service-details-content">
+                    <div class="img-wrapper"><img src="{% static "img/desarrollo2.png" %}" alt=""></div>
+                    <div class="service-details-desc">
+                       <h2 class="title">Automatización de Datos: Gestión Eficiente y Segura para tu Negocio</h2>
+                       <p style="text-align: justify;">Revoluciona la manera en que manejas la información con nuestra solución 
+                        de carga y descarga de datos desde la web. Ofrecemos un servicio integral que simplifica procesos mediante
+                         la gestión de usuarios, inicio de sesión seguro y la capacidad de cargar textos, imágenes, videos y más.
+                          Automatiza tareas y mejora la calidad y seguridad de la información al conectar tu base de datos directamente 
+                          a tu página web. Con notificaciones automáticas a clientes sobre nueva documentación actualizada, 
+                        estamos redefiniendo la eficiencia empresarial y la protección de datos.</p>
+                       <div class="overview">
+                          <h3 class="title">Gestión de Usuarios y Acceso Seguro</h3>
+                          <p style="text-align: justify;">Optimiza el acceso a tu plataforma con nuestro sistema de gestión de usuarios.
+                             Desde el inicio de sesión seguro hasta la asignación de roles, garantizamos un control preciso sobre quién 
+                             tiene acceso a qué información.
+                             Simplifica la administración de permisos y protege la privacidad de tus datos.</p>
+                       </div>
+
+                    <div class="img-wrapper"><img src="{% static "img/desarrollo3.png" %}" alt=""></div>
+                    <div class="overview">
+                        <h3 class="title">Carga de Contenidos Multiformato</h3>
+                        <p style="text-align: justify;">Facilita la incorporación de información a tu sistema con nuestra capacidad
+                             de carga multiformato. Desde simples textos hasta imágenes y videos, nuestro servicio asegura una transición
+                              sin problemas de datos,
+                             permitiéndote mantener tu contenido actualizado de manera eficiente.</p>
+                     </div>
+                     <div class="img-wrapper"><img src="{% static "img/desarrollo4.png" %}" alt=""></div>
+                     <div class="overview">
+                        <h3 class="title">Automatización de Notificaciones</h3>
+                        <p style="text-align: justify;">Mantén a tus clientes informados en tiempo real con nuestro sistema
+                             de notificaciones automatizadas. Reciben alertas instantáneas sobre la disponibilidad de nueva documentación,
+                             asegurando que estén siempre al tanto de las actualizaciones relevantes y mejorando la comunicación con tu audiencia.</p>
+                     </div>
+                   
+                     <div class="overview">
+                        <h3 class="title">Conexión Directa a la Base de Datos</h3>
+                        <p style="text-align: justify;">Elimina la complejidad en la gestión de datos al conectar directamente tu página web
+                             a la base de datos. Esto no solo acelera los procesos, 
+                            sino que también mejora la seguridad al reducir las vulnerabilidades asociadas con transferencias 
+                            de datos manuales.</p>
+                        
+                            <p style="text-align: justify;">Transforma la forma en que tu negocio maneja la información. Con nuestra solución,
+                                 simplifica procesos, asegura la calidad de los datos y protege la información crítica. </p>
+                     </div>
+                    </div>
+                 </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              {% include "servyconsulta.html" %}
+
+     <!--   cta section start    -->
+     <div class="cta-section cta-bg">
+      <div class="container">
+         <div class="cta-container">
+            <div class="row align-items-left">
+              
+                {% include "consulta.html" %}
+              
+               
+            </div>
+         </div>
+      </div>
+      <div class="cta-overlay"></div>
+      
+   </div>
+   <!--   cta section end    -->
+
+
+ <!--   footer start    -->
+ {% include "QA.html" %}
+ {% include "footer.html" %}
+
+ <!-- footer end -->
+
+     
+      <!-- preloader section start -->
+      <div class="loader-container">
+         <span class="loader">
+         <span class="loader-inner"></span>
+         </span>
+      </div>
+      <!-- preloader section end -->
+
+
+
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <!-- bootstrap js -->
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <!-- owl carousel js -->
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <!-- isotope js -->
+      <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+      <!-- easyzoom js -->
+      
+      <script src="{% static 'js/lightbox.min.js' %}"></script>
+    
+     
+      <!-- slicknav js -->
+      <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+  
+      <!-- wow js -->
+      
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!-- main js -->
+      <script src="{% static 'js/main.js' %}"></script>
+    </body>
+      {% endblock %}
+        
+
+</html>

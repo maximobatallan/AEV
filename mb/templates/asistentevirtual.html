@@ -24,370 +24,101 @@
         {% block content %}
    
    <body>
-     
+   
 
+     <!--  service details section start  -->
+     <div class="service-details-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-xl-7 col-lg-8">
+                 <div class="service-details-content">
+                    <div class="img-wrapper"><img src="{% static "img/1.png" %}" alt=""></div>
+                    <div class="service-details-desc">
+                       <h2 class="title">Asistente Virtual Integrado, Respuestas Instantáneas en WhatsApp, Instagram y Facebook</h2>
+                       <p style="text-align: justify;">Descubre la revolución en la comunicación digital con nuestro Asistente
+                         Virtual conectado a la API oficial de Meta Developer. Imagina tener un aliado inteligente que responde mensajes
+                          automáticamente en WhatsApp, Instagram y Facebook. Ya sea manejando preguntas predeterminadas o utilizando 
+                          la potencia de ChatGPT para respuestas personalizadas, nuestro asistente lleva la interacción con tus clientes
+                           a un nivel completamente nuevo. La eficiencia y la personalización
+                         se unen para ofrecer una experiencia de usuario inigualable, impulsando la productividad y la satisfacción del cliente.</p>
+                       <div class="overview">
+                          <h3 class="title">Conexión Multicanal sin Esfuerzo</h3>
+                          <p style="text-align: justify;">Simplifica la gestión de tus canales de comunicación con nuestro Asistente Virtual.
+                            Desde WhatsApp hasta Instagram y Facebook, nuestro sistema integrado asegura que no se escape ningún mensaje importante. 
+                            Con respuestas rápidas y relevantes, tu marca siempre está a solo un mensaje de distancia de tus clientes,
+                             brindando atención instantánea 
+                           y fortaleciendo la conexión con tu audiencia.</p>
+                       </div>
 
-      <!--  hero area start  -->
-      <div class="hero-area hero-bg-2 home-2">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-8">
-                  <div id="formulario" class="hero-txt">
-                     <span class="wow fadeInDown" data-wow-duration="1.5s">Servicios para Emprendedores</span>
-                     <h1 class="wow fadeInUp" data-wow-duration="1.5s">Obtene Clientes en Línea</h1>
-                     <a href="services.html" class="wow fadeInUp boxed-btn" data-wow-duration="1.5s" href="emprendedores.html"><span>Tu tienda Online</span></a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="request-section">
-            <div class="container">
-               <div class="request-section-container">
-                  <div class="row">
-                     <div class="col-xl-5 col-lg-6">
-                        <span class="title">Formulario de Contacto</span>
-                        <h2 class="subtitle">Deje su consulta</h2>
-                        <p>Lo estaremos contactando a la brevedad.</p>
+                    <div class="img-wrapper"><img src="{% static "img/2.png" %}" alt=""></div>
+                    <div class="overview">
+                        <h3 class="title">Preguntas Predeterminadas para Respuestas Rápidas</h3>
+                        <p style="text-align: justify;">Optimiza tu tiempo y el de tus clientes con preguntas predeterminadas
+                            configuradas en nuestro Asistente Virtual. Desde información básica hasta detalles específicos de productos 
+                            o servicios, nuestro asistente maneja las consultas comunes de manera instantánea, 
+                           permitiéndote centrarte en tareas más estratégicas para tu negocio.</p>
                      </div>
-                     <div class="offset-xl-1 col-xl-6 col-lg-6">
-                        <div class="request-form">
-                           <form action="{% url 'save_formulario' %}" method="post">{% csrf_token %}
-                              <div class="row">
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="nombre" type="text" placeholder="Nombre"></div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element">
-                                       <div class="select-wrapper">
-                                          <select name="freight">
-                                             <option value="" selected>Emprededores</option>
-                                             <option value="">Asistente Virtual</option>
-                                             <option value="">Automatización de tareas</option>
-                                             
-                                             <option value="">Gestión de la Información</option>
-                                             <option value="">Desarrollos Personalizados</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="email" type="email" placeholder="Email"></div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="telefono" type="text" placeholder="Teléfono"></div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia"></textarea></div>
-                                 </div>
-
-                                 <div class="col-lg-12">
-                                    <div class="form-element mb-12 text-right">
-                                        <button type="submit" class="boxed-btn">
-                                            <span>Enviar</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                              </div>
-                           </form>
-                        </div>
+                     <div class="img-wrapper"><img src="{% static "img/pedido.png" %}" alt=""></div>
+                     <div class="overview">
+                        <h3 class="title">Inteligencia Artificial Personalizada con ChatGPT</h3>
+                        <p style="text-align: justify;">Eleva la interacción a un nivel superior con la potencia de ChatGPT. 
+                           Nuestro Asistente Virtual no solo responde preguntas comunes, sino que también es capaz de comprender y
+                            responder a consultas más complejas de manera inteligente. Ofrece respuestas personalizadas que reflejen la 
+                            voz y la personalidad de tu marca, 
+                           creando una experiencia de usuario única y memorable.</p>
                      </div>
-                  </div>
-               </div>
-            </div>
-            <div class="request-section-overlay"></div>
-         </div>
-         <div class="hero-overlay"></div>
-      </div>
-      <!--  hero area end  -->
+                     <div class="img-wrapper"><img src="{% static "img/direccion.png" %}" alt=""></div>
+                     <div class="overview">
+                        <h3 class="title">Atención las 24 horas</h3>
+                        <p style="text-align: justify;">Con nuestro Asistente Virtual conectado a la API de Meta Developer,
+                            transforma la manera en que te comunicas con tus clientes, brindando respuestas instantáneas y 
+                            personalizadas en los canales que más utilizan. Además, con atención 24 horas, obtén interesados mientras duermes.
+                            ¡Haz que tu marca destaque con una atención al cliente excepcional!</p>
+                     </div>
+                    </div>
+                 </div>
+              </div>
 
 
-      <!--  service section start  -->
-      <div class="service-section home-2">
-         <div class="container">
-            <span class="title">Nuestros Servicios</span>
-            <h2 class="subtitle">¿Que se Ofrece?</h2>
-            <div class="service-carousel owl-carousel owl-theme">
-               <div class="single-service">
-                  <div class="img-wrapper">
-                     <img src="{% static 'img/exposicionenlinea.png' %}" alt="">
-                  </div>
-                  <div class="service-txt">
-                     <h4 class="service-title">Exposición en Línea</h4>
-                     <p class="service-para">Consigue Clientes Potenciales a traves de la web, vende tus productos o Servicios en Linea, según tus necesidades</p>
-                     <a href="service-details.html" class="readmore">Leer Más</a>
-                  </div>
-               </div>
-               <div class="single-service">
-                  <div class="img-wrapper">
-                     <img src="{% static 'img/Asistente Virtual.png' %}" alt="">
-                  </div>
-                  <div class="service-txt">
-                     <h4 class="service-title">Asistente Virtuales</h4>
-                     <p class="service-para">Obten un Asistente Virtual para la atención de tus Cliente con conexion a tus redes sociales. Whatsapp, Instagram, Facebook</p>
-                     <a href="" class="readmore">Leer Más</a>
-                  </div>
-               </div>
-               <div class="single-service">
-                  <div class="img-wrapper">
-                     <img src="{% static 'img/basededatos.png' %}" alt="">
-                  </div>
-                  <div class="service-txt">
-                     <h4 class="service-title">Gestión de la Información</h4>
-                     <p class="service-para">Manten la Información de Negocio ordenada, segura y en Línea. Gestion de Bases de datos para recopilar o brindar Información a tus Clientes</p>
-                     <a href="" class="readmore">Leer Más</a>
-                  </div>
-               </div>
-               <div class="single-service">
-                  <div class="img-wrapper">
-                     <img src="{% static 'img/desarrollopersonalizado.png' %}" alt="">
-                  </div>
-                  <div class="service-txt" >
-                     <h4 class="service-title">Desarrollos Personalizados</h4>
-                     
-                     <p class="service-para">Productos digitales a Medida del Cliente. Sectores: Finanzas, Recursos Humanos, Comercial, Ventas, Administrativos  </p>
-                     <a href="" class="readmore">Leer Más</a>
-                  </div>
-               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              {% include "servyconsulta.html" %}
+
+     <!--   cta section start    -->
+     <div class="cta-section cta-bg">
+      <div class="container">
+         <div class="cta-container">
+            <div class="row align-items-left">
+              
+                {% include "consulta.html" %}
+              
+               
             </div>
          </div>
       </div>
-      <!--  service section end  -->
+      <div class="cta-overlay"></div>
+      
+   </div>
+   <!--   cta section end    -->
 
 
-      <!--  about section start  -->
-      <div class="about-section home-2">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-5">
-                  <img class="ceo-pic" src="{% static "img/acercadenos.png" %}" alt="">
-               </div>
-               <div class="col-lg-6 offset-lg-1">
-                  <div class="comment-content">
-                     <span class="title">Acerca Nosotros</span>
-                     <h2 class="subtitle">Especialista en Servicios Informaticos</h2>
-                     <div style="text-align: justify;">
-                     <p>¡Hola! Soy Máximo Batallan, un apasionado desarrollador de software con un compromiso inquebrantable con la excelencia y la innovación. Mi viaje en el mundo del desarrollo comenzó hace años, y desde entonces he estado dedicado a la creación de soluciones digitales inteligentes y eficientes. 💻💡</p>
-                     <p>Mi enfoque principal es combinar mi profundo conocimiento técnico con la creatividad para crear software que resuelva problemas reales. Creo firmemente que la tecnología puede transformar y mejorar la forma en que trabajamos y vivimos. Estoy comprometido a desarrollar soluciones que no solo sean funcionales, sino también fáciles de usar y estéticamente agradables. 🌟</p>
-                     </div>
-                     <div class="ceo-details">
-                        <img src="assets/img/signature-2.png" alt="">
-                        <h5>Batallan Máximo</h5>
-                        <span>Data Scientist</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--  about section end  -->
+ <!--   footer start    -->
+ {% include "QA.html" %}
+ {% include "footer.html" %}
 
-
-      <!--  features section start  -->
-      <div class="features-section home-2 border-top border-top-lg-0">
-         <div class="container">
-            <div class="row feature-content">
-               <div class="col-xl-5 offset-xl-7 col-lg-6 offset-lg-6 pr-0">
-                  <div class="features">
-                     <span class="title">Compromiso con el Cliente</span>
-                     <h2 class="subtitle">Atención Personalizada</h2>
-                     <div class="feature-lists">
-                        <div class="single-feature wow fadeInUp" data-wow-duration="1s">
-                           <div class="icon-wrapper"><i class="flaticon-customer-service"></i></div>
-                           <div class="feature-details">
-                              <h4>Soporte 24/7</h4>
-                              <p>Escribenos por whatsapp al numero +549 11-2396-5421, contestamos a la brevedad.</p>
-                           </div>
-                        </div>
-                        <div class="single-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                           <div class="icon-wrapper"><i class="flaticon-email"></i></div>
-                           <div class="feature-details">
-                              <h4>Desarrollos en tiempo y forma</h4>
-                              <p>Compromiso de cumplimiento de acuerdos preestablecidos</p>
-                           </div>
-                        </div>
-                        <div class="single-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                           <div class="icon-wrapper"><i class="flaticon-worldwide"></i></div>
-                           <div class="feature-details">
-                              <h4>Servicio Global</h4>
-                              <p>Desarrollo de Software en cualquier parte del mundo</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--  features section end  -->
-
-
-      <!--   cta section start    -->
-      <div class="cta-section cta-bg">
-         <div class="container">
-            <div class="cta-container">
-               <div class="row align-items-center">
-                  <div class="col-lg-9">
-                     <h2 class="mb-lg-0 text-center text-lg-left">Potencia tus proyectos con tecnología innovadora.</h2>
-                  </div>
-                  <div class="col-lg-3 text-center text-lg-right">
-                     <a href="contact.html" class="boxed-btn"><span>Contacto</span></a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="cta-overlay"></div>
-      </div>
-      <!--   cta section end    -->   
-
-
-      <!--   faq section start    -->
-      <div class="faq-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-7">
-                  <div class="targets home-2">
-                     <div class="box wow fadeInUp" data-wow-duration="1.5s">
-                        <div class="icon-wrapper"><i class="flaticon-external-link-square-with-an-arrow-in-right-diagonal"></i></div>
-                        <div class="box-details">
-                           <h4>Misión</h4>
-                           <p>Impulsar la innovación digital 
-                            al ofrecer soluciones de software excepcionales. Comprometido a superar las expectativas del cliente, 
-                            proporcionando productos y servicios que no solo resuelven desafíos actuales, sino que también anticipan 
-                            y responden a las demandas emergentes del mundo tecnológico. Con una pasión por la excelencia y la creatividad, 
-                            dedicado a ser socio estratégico de los clientes en su viaje hacia el éxito digital.</p>
-                        </div>
-                     </div>
-                     <div class="box wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                        <div class="icon-wrapper"><i class="flaticon-check"></i></div>
-                        <div class="box-details">
-                           <h4>Vision</h4>
-                           <p> Visualizamos un futuro donde nuestra tecnología impulsa el progreso, inspira cambios positivos y transforma la forma en que el mundo interactúa con la tecnología. A medida que avanzamos, 
-                            nos esforzamos por construir un legado de excelencia, creatividad y contribución significativa al panorama digital global.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="offset-xl-1 col-xl-5 col-lg-5">
-                  <span class="title">Q&A</span>
-                  <h2 class="subtitle">Preguntas Frecuentes</h2>
-                  <div class="accordion" id="accordionExample">
-                     <div class="card wow fadeInUp" data-wow-duration="1s">
-                        <div class="card-header" id="headingOne">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                ¿Cómo funciona el proceso de desarrollo?                       
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Nuestro proceso comienza con una consulta detallada para entender las necesidades. Luego, diseñamos y desarrollamos soluciones personalizadas, manteniéndote informado en cada etapa del proyecto. 
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="card-header" id="headingTwo">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                ¿Cuánto tiempo lleva desarrollar un proyecto de software?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                           <div class="card-body">
-                            El tiempo varía según la complejidad del proyecto. Realizamos evaluaciones detalladas para proporcionarte estimaciones precisas y garantizar entregas oportunas. 
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="card-header" id="headingThree">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Ofreces soporte después de la implementación del software?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Sí, proporcionamos soporte continuo, actualizaciones y mantenimiento para garantizar que tu software funcione de manera óptima a lo largo del tiempo.
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="card-header" id="headingThree">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Cuál es el método de pago y la estructura de facturación?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Se realiza a traves de un sistema de pago escalonado para garantizar la transparencia y la satisfacción del cliente. El proceso generalmente comienza con un anticipo, que cubre los costos iniciales y nos permite comenzar a trabajar en tu proyecto. Posteriormente, el pago restante se estructura según hitos u objetivos predefinidos en el proyecto. Esto no solo permite una colaboración financiera flexible, sino que también asegura que solo pagues por los avances y entregables alcanzados de manera exitosa.
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--   faq section end    -->
-
-
-      <!--   footer section start    -->
-      <footer>
-         <div class="container">
-            <div class="top-footer">
-               <div class="row">
-                  <div class="col-xl-4 col-lg-4">
-                     <div  class="logo-wrapper"><img src="assets/img/footer_logo.png" alt=""></div>
-                     <p>Algorithmic Evolution <br> Potencia tus proyectos con tecnología innovadora. <br> Eleva tus resultados al siguiente nivel. </p>
-                  </div>
-                  <div class="offset-xl-1 col-xl-2 col-lg-2">
-                     <h4>Aev</h4>
-                     <ul class="userful-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="about.html">Acerca de AEV</a></li>
-                        <li><a href="services.html">Servicios</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
-                
-                     </ul>
-                  </div>
-                  <div class="col-xl-2 col-lg-2">
-                     <h4>Servicios</h4>
-                     <ul class="userful-links">
-                        <li><a href="#">Exposición en línea</a></li>
-                        <li><a href="#">Asistente Virtual</a></li>
-                        <li><a href="#">Gestión de la Información</a></li>
-                        <li><a href="#">Desarrollos Personalizados</a></li>
-                        
-                     </ul>
-                  </div>
-                  <div class="col-xl-3 col-lg-4">
-                     <h4>Contactenos</h4>
-                     <div class="footer-contact">
-                        
-                        <div class="contact-info">
-                           <div class="icon-wrapper"><i class="flaticon-call"></i></div>
-                           <p>+549 11 2396 5421 </p>
-                        </div>
-                        <div class="contact-info">
-                           <div class="icon-wrapper"><i class="flaticon-email"></i></div>
-                           <p>aev@aev.com</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="bottom-footer">
-               <p class="text-center">Desarrollado por Algorithmic Evolution - 2023</p>
-            </div>
-         </div>
-      </footer>
-      <!--   footer section end    -->
-
+ <!-- footer end -->
 
       <!-- preloader section start -->
       <div class="loader-container">
@@ -396,13 +127,6 @@
          </span>
       </div>
       <!-- preloader section end -->
-
-
-      <!-- back to top area start -->
-      <div class="back-to-top">
-         <i class="fas fa-chevron-up"></i>
-      </div>
-      <!-- back to top area end -->
 
 
       <script src="{% static 'js/popper.min.js' %}"></script>
@@ -425,7 +149,9 @@
       <script src="{% static 'js/wow.min.js' %}"></script>
       <!-- main js -->
       <script src="{% static 'js/main.js' %}"></script>
-      
+    
+   
+   </body>
       {% endblock %}
         
 

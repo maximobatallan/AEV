@@ -1,0 +1,39 @@
+ <!--  sidebar section start  -->
+ <div id ="formulario" class="col-xl-4 offset-xl-1 col-lg-4">
+    <div class="sidebar">
+       <div class="category-sidebar">
+          <ul>
+             <li><a href="{% url 'exposicionenlinea' %}">Ecommerce y Servicios</a></li>
+             <li><a href="{% url 'asistentevirtual' %}">Asistente Virtual</a></li>
+             <li><a href="{% url 'gestiondelainformacion' %}">Gestión de la Información</a></li>
+             <li><a href="{% url 'desarrollospersonalizados' %}">Desarrollos Personalizados</a></li>
+             
+          </ul>
+       </div>
+       <div class="quote-sidebar">
+          <h3>Contacto</h3>
+          <form action="{% url 'save_formulario' %}" method="post"class="quote-form">
+            {% csrf_token %}
+
+             <div class="form-element"><input type="text" name="nombre" placeholder="Nombre" required></div>
+             <div class="form-element"><input name="email" type="email" placeholder="Email"required></div>
+             <div class="form-element"><input name="telefono" type="text" placeholder="Telefono" required></div>
+             <div class="form-element"><select name="categoria" required>
+               <option value="emprendedores" selected>Emprendedores</option>
+               <option value="asistente_virtual">Asistente Virtual</option>
+               <option value="automatizacion_tareas">Automatización de tareas</option>
+               <option value="gestion_informacion">Gestión de la Información</option>
+               <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
+            </select></div>
+            <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia"></textarea></div>
+             <div class="form-element"><button type="submit"><span>Enviar</span></button></div>
+             
+          </form>
+       </div>
+    </div>
+ </div>
+ <!--  sidebar section end  -->
+</div>
+</div>
+</div>
+<!--  service details section end  -->

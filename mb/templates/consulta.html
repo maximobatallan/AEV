@@ -1,0 +1,42 @@
+<div class="offset-xl-1 col-xl-6 col-lg-6">
+    <div class="request-form">
+       <form action="{% url 'save_formulario' %}" method="post">
+         {% csrf_token %}
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-element"><input name="nombre" type="text" placeholder="Nombre"></div>
+             </div>
+             <div class="col-md-6">
+                <div class="form-element">
+                   <div class="select-wrapper">
+                      <select name="categoria" required>
+                         <option value="emprendedores" selected>Emprendedores</option>
+                         <option value="asistente_virtual">Asistente Virtual</option>
+                         <option value="automatizacion_tareas">Automatización de tareas</option>
+                         <option value="gestion_informacion">Gestión de la Información</option>
+                         <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
+                      </select>
+                   </div>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="form-element"><input name="email" type="email" placeholder="Email" required></div>
+             </div>
+             <div class="col-md-6">
+                <div class="form-element"><input name="telefono" type="text" placeholder="Teléfono" required></div>
+             </div>
+             <div class="col-lg-12">
+                <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia"></textarea></div>
+             </div>
+
+             <div class="col-lg-12">
+                <div class="form-element mb-12 text-right">
+                    <button type="submit">
+                        <span>Enviar</span>
+                    </button>
+                </div>         
+             </div>
+          </div>
+       </form>
+    </div>
+ </div>

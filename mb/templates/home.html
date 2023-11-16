@@ -31,11 +31,13 @@
       <div class="hero-area hero-bg-2 home-2">
          <div class="container">
             <div class="row">
-               <div class="col-xl-6 col-lg-8">
+               <div class="col-xl-9 col-lg-5">
                   <div id='formulario' class="hero-txt">
                      <span class="wow fadeInDown" data-wow-duration="1.5s">Servicios para Emprendedores</span>
-                     <h1 class="wow fadeInUp" data-wow-duration="1.5s">Obtene Clientes en Línea</h1>
-                     <a href="#servicios" class="wow fadeInUp boxed-btn" data-wow-duration="1.5s"><span>Tu tienda Online</span></a>
+                     <h1 class="wow fadeInUp" data-wow-duration="1.5s">Captura la atención de nuevos clientes</h1>
+                     
+                     <a href="#servicios" class="wow fadeInUp boxed-btn" data-wow-duration="1.5s"><span>Conoce más</span></a>
+                
                   </div>
                </div>
             </div>
@@ -59,13 +61,12 @@
                                  <div class="col-md-6">
                                     <div class="form-element">
                                        <div class="select-wrapper">
-                                          <select name="freight">
-                                             <option value="" selected>Emprededores</option>
-                                             <option value="">Asistente Virtual</option>
-                                             <option value="">Automatización de tareas</option>
-                                             
-                                             <option value="">Gestión de la Información</option>
-                                             <option value="">Desarrollos Personalizados</option>
+                                          <select name="categoria">
+                                             <option value="emprendedores" selected>Emprendedores</option>
+                                             <option value="asistente_virtual">Asistente Virtual</option>
+                                             <option value="automatizacion_tareas">Automatización de tareas</option>
+                                             <option value="gestion_informacion">Gestión de la Información</option>
+                                             <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
                                           </select>
                                        </div>
                                     </div>
@@ -104,40 +105,40 @@
       <!--  service section start  -->
       <div id="servicios" class="service-section home-2">
          <div class="container">
-            <span class="title">Nuestros Servicios</span>
-            <h2 class="subtitle">¿Que se Ofrece?</h2>
+            <span class="title">Encuentra la solución perfecta para tus necesidades</span>
+            <h2 class="subtitle">Nuestros Servicios</h2>
             <div class="service-carousel owl-carousel owl-theme">
-               <div class="single-service">
+               <div class="single-service" onclick="window.location.href='exposicionenlinea.html';" style="cursor: pointer;">
                   <div class="img-wrapper">
                      <img src="{% static 'img/exposicionenlinea.png' %}" alt="">
                   </div>
                   <div class="service-txt">
                      <h4 class="service-title">Exposición en Línea</h4>
                      <p class="service-para">Consigue Clientes Potenciales a traves de la web, vende tus productos o Servicios en Linea, según tus necesidades</p>
-                     <a href="service-details.html" class="readmore">Leer Más</a>
+                     <a href="exposicionenlinea.html" class="readmore">Leer Más</a>
                   </div>
                </div>
-               <div class="single-service">
+               <div class="single-service" onclick="window.location.href='asistentevirtual.html';" style="cursor: pointer;">
                   <div class="img-wrapper">
                      <img src="{% static 'img/Asistente Virtual.png' %}" alt="">
                   </div>
                   <div class="service-txt">
                      <h4 class="service-title">Asistente Virtuales</h4>
                      <p class="service-para">Obten un Asistente Virtual para la atención de tus Cliente con conexion a tus redes sociales. Whatsapp, Instagram, Facebook</p>
-                     <a href="" class="readmore">Leer Más</a>
+                     <a href="asistentevirtual.html" class="readmore">Leer Más</a>
                   </div>
                </div>
-               <div class="single-service">
+               <div class="single-service" onclick="window.location.href='gestiondelainformacion.html';" style="cursor: pointer;">
                   <div class="img-wrapper">
                      <img src="{% static 'img/basededatos.png' %}" alt="">
                   </div>
                   <div class="service-txt">
                      <h4 class="service-title">Gestión de la Información</h4>
                      <p class="service-para">Manten la Información de Negocio ordenada, segura y en Línea. Gestion de Bases de datos para recopilar o brindar Información a tus Clientes</p>
-                     <a href="" class="readmore">Leer Más</a>
+                     <a href="gestiondelainformacion.html" class="readmore">Leer Más</a>
                   </div>
                </div>
-               <div class="single-service">
+               <div class="single-service" onclick="window.location.href='desarrollospersonalizados.html';" style="cursor: pointer;">
                   <div class="img-wrapper">
                      <img src="{% static 'img/desarrollopersonalizado.png' %}" alt="">
                   </div>
@@ -145,7 +146,7 @@
                      <h4 class="service-title">Desarrollos Personalizados</h4>
                      
                      <p class="service-para">Productos digitales a Medida del Cliente. Sectores: Finanzas, Recursos Humanos, Comercial, Ventas, Administrativos  </p>
-                     <a href="" class="readmore">Leer Más</a>
+                     <a href="desarrollospersonalizados.html" class="readmore">Leer Más</a>
                   </div>
                </div>
             </div>
@@ -240,153 +241,14 @@
       <!--   cta section end    -->   
 
 
-      <!--   faq section start    -->
-      <div class="faq-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-7">
-                  <div class="targets home-2">
-                     <div class="box wow fadeInUp" data-wow-duration="1.5s">
-                        <div class="icon-wrapper"><i class="flaticon-external-link-square-with-an-arrow-in-right-diagonal"></i></div>
-                        <div class="box-details">
-                           <h4>Misión</h4>
-                           <p>Impulsar la innovación digital 
-                            al ofrecer soluciones de software excepcionales. Comprometido a superar las expectativas del cliente, 
-                            proporcionando productos y servicios que no solo resuelven desafíos actuales, sino que también anticipan 
-                            y responden a las demandas emergentes del mundo tecnológico. Con una pasión por la excelencia y la creatividad, 
-                            dedicado a ser socio estratégico de los clientes en su viaje hacia el éxito digital.</p>
-                        </div>
-                     </div>
-                     <div class="box wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                        <div class="icon-wrapper"><i class="flaticon-check"></i></div>
-                        <div class="box-details">
-                           <h4>Vision</h4>
-                           <p> Visualizamos un futuro donde nuestra tecnología impulsa el progreso, inspira cambios positivos y transforma la forma en que el mundo interactúa con la tecnología. A medida que avanzamos, 
-                            nos esforzamos por construir un legado de excelencia, creatividad y contribución significativa al panorama digital global.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="offset-xl-1 col-xl-5 col-lg-5">
-                  <span class="title">Q&A</span>
-                  <h2 class="subtitle">Preguntas Frecuentes</h2>
-                  <div class="accordion" id="accordionExample">
-                     <div class="card wow fadeInUp" data-wow-duration="1s">
-                        <div class="card-header" id="headingOne">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                ¿Cómo funciona el proceso de desarrollo?                       
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Nuestro proceso comienza con una consulta detallada para entender las necesidades. Luego, diseñamos y desarrollamos soluciones personalizadas, manteniéndote informado en cada etapa del proyecto. 
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="card-header" id="headingTwo">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                ¿Cuánto tiempo lleva desarrollar un proyecto de software?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                           <div class="card-body">
-                            El tiempo varía según la complejidad del proyecto. Realizamos evaluaciones detalladas para proporcionarte estimaciones precisas y garantizar entregas oportunas. 
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="card-header" id="headingThree">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Ofreces soporte después de la implementación del software?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Sí, proporcionamos soporte continuo, actualizaciones y mantenimiento para garantizar que tu software funcione de manera óptima a lo largo del tiempo.
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="card-header" id="headingThree">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Cuál es el método de pago y la estructura de facturación?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                           <div class="card-body">
-                            Se realiza a traves de un sistema de pago escalonado para garantizar la transparencia y la satisfacción del cliente. El proceso generalmente comienza con un anticipo, que cubre los costos iniciales y nos permite comenzar a trabajar en tu proyecto. Posteriormente, el pago restante se estructura según hitos u objetivos predefinidos en el proyecto. Esto no solo permite una colaboración financiera flexible, sino que también asegura que solo pagues por los avances y entregables alcanzados de manera exitosa.
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--   faq section end    -->
+      {% include "QA.html" %}
 
 
-      <!--   footer section start    -->
-      <footer>
-         <div class="container">
-            <div class="top-footer">
-               <div class="row">
-                  <div class="col-xl-4 col-lg-4">
-                     <div  class="logo-wrapper"><img src="assets/img/footer_logo.png" alt=""></div>
-                     <p>Algorithmic Evolution <br> Potencia tus proyectos con tecnología innovadora. <br> Eleva tus resultados al siguiente nivel. </p>
-                  </div>
-                  <div class="offset-xl-1 col-xl-2 col-lg-2">
-                     <h4>Aev</h4>
-                     <ul class="userful-links">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#acercadeaev">Acerca de AEV</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#formulario">Contacto</a></li>
-                
-                     </ul>
-                  </div>
-                  <div class="col-xl-2 col-lg-2">
-                     <h4>Servicios</h4>
-                     <ul class="userful-links">
-                        <li><a href="{% url 'exposicionenlinea' %}">Exposición en línea</a></li>
-                        <li><a href="{% url 'asistentevirtual' %}">Asistente Virtual</a></li>
-                        <li><a href="{% url 'gestiondelainformacion' %}">Gestión de la Información</a></li>
-                        <li><a href="{% url 'desarrollospersonalizados' %}">Desarrollos Personalizados</a></li>
-                        
-                     </ul>
-                  </div>
-                  <div class="col-xl-3 col-lg-4">
-                     <h4>Contactenos</h4>
-                     <div class="footer-contact">
-                        
-                        <div class="contact-info">
-                           <div class="icon-wrapper"><i class="flaticon-call"></i></div>
-                           <p>+549 11 2396 5421 </p>
-                        </div>
-                        <div class="contact-info">
-                           <div class="icon-wrapper"><i class="flaticon-email"></i></div>
-                           <p>aev@aev.com</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="bottom-footer">
-               <p class="text-center">Desarrollado por Algorithmic Evolution - 2023</p>
-            </div>
-         </div>
-      </footer>
-      <!--   footer section end    -->
+   <!--   footer start    -->
 
+      {% include "footer.html" %}
+
+<!-- footer end -->
 
       <!-- preloader section start -->
       <div class="loader-container">
@@ -397,11 +259,6 @@
       <!-- preloader section end -->
 
 
-      <!-- back to top area start -->
-      <div class="back-to-top">
-         <i class="fas fa-chevron-up"></i>
-      </div>
-      <!-- back to top area end -->
 
 
       <script src="{% static 'js/popper.min.js' %}"></script>
