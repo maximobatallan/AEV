@@ -12,7 +12,7 @@ def home(request):
 
 def send_user_data_email(user_data):
     subject = 'Nuevo usuario registrado'
-    message = f'Se ha registrado un nuevo usuario con los siguientes datos:\n\n{user_data}'
+    message = f'Nuevo Usuario:\n\n{user_data}'
     
 
     from_email = 'notificaciondepaginaweb@gmail.com'
@@ -29,15 +29,17 @@ def save_formulario(request):
     telefono = request.POST.get('telefono')
     email = request.POST.get('email')
     texto = request.POST.get('texto')
-
-    formulario1 = formulario(nombre=nombre, telefono=telefono, mail=email, texto=texto)
+    categoria = request.POST.get('categoria')
+    
+    
+    formulario1 = formulario(nombre=nombre, categoria=categoria, telefono=telefono, mail=email, texto=texto)
     formulario1.save()
-    user_data = f"nombre: {nombre} telefono: {telefono} texto: {texto}"
+    user_data = f"nombre: {nombre} telefono: {telefono} categoria: {categoria} texto: {texto}"
     send_user_data_email(user_data)
     
     
     
-    return render(request, 'index.html')
+    return render(request, 'home.html')
 
 
 def asistentevirtual(request):    
