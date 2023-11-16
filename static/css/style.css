@@ -2088,7 +2088,7 @@ ul.search-cart-area {
         text-align: center;
         font-size: 2em;
         color: #fff;
-        z-index: 1;
+        z-index: 6;
         opacity: 0.8;
         animation: whatsapp-btn 1s ease-in-out infinite alternate;
     }}
