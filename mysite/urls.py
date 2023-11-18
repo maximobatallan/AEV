@@ -25,4 +25,6 @@ urlpatterns = [
     path('desarrollospersonalizados.html', views.desarrollospersonalizados, name='desarrollospersonalizados'),
     path('exposicionenlinea.html', views.exposicionenlinea, name='exposicionenlinea'),
     path('gestiondelainformacion.html', views.gestiondelainformacion, name='gestiondelainformacion'),
+    path('acercadeaev.html', views.acercadeaev, name='acercadeaev'),
+
 ]
