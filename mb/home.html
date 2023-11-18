@@ -1,0 +1,314 @@
+{% extends "base.html" %}
+{% load static%}
+{% block head %}
+    {{ block.super }}
+    
+    <!-- easyzoom css -->
+    <link rel="stylesheet" href="{% static 'css/easyzoom.css' %}">
+      <!-- slicknav css -->
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    
+    {% endblock %}
+       
+
+
+        {% block content %}
+   
+   <body>
+     
+
+
+      <!--  hero area start  -->
+      <div class="hero-area hero-bg-2 home-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-9 col-lg-5">
+                  <div id='formulario' class="hero-txt">
+                     <span class="wow fadeInDown" data-wow-duration="1.5s">Servicios para Emprendedores</span>
+                     <h1 class="wow fadeInUp" data-wow-duration="1.5s">Captura la atención de nuevos clientes</h1>
+                     
+                     <a href="#servicios" class="wow fadeInUp boxed-btn" data-wow-duration="1.5s"><span>Conoce más</span></a>
+                
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div  class="request-section">
+            <div class="container">
+               <div class="request-section-container">
+                  <div class="row">
+                     <div class="col-xl-5 col-lg-6">
+                        <span class="title">Formulario de Contacto</span>
+                        <h2 class="subtitle">Deje su consulta</h2>
+                        <p>Lo estaremos contactando a la brevedad.</p>
+                     </div>
+                     <div class="offset-xl-1 col-xl-6 col-lg-6">
+                        <div class="request-form">
+                           <form action="{% url 'save_formulario' %}" method="post">{% csrf_token %}
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-element"><input name="nombre" type="text" placeholder="Nombre"></div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-element">
+                                       <div class="select-wrapper">
+                                          <select name="categoria">
+                                             <option value="emprendedores" selected>Emprendedores</option>
+                                             <option value="asistente_virtual">Asistente Virtual</option>
+                                             <option value="automatizacion_tareas">Automatización de tareas</option>
+                                             <option value="gestion_informacion">Gestión de la Información</option>
+                                             <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-element"><input name="email" type="email" placeholder="Email"></div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-element"><input name="telefono" type="text" placeholder="Teléfono"></div>
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia"></textarea></div>
+                                 </div>
+
+                                 <div class="col-lg-12">
+                                    <div class="form-element mb-12 text-right">
+                                        <button type="submit" class="boxed-btn">
+                                            <span>Enviar</span>
+                                        </button>
+                                    </div>         
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="request-section-overlay"></div>
+         </div>
+         <div class="hero-overlay"></div>
+      </div>
+      <!--  hero area end  -->
+
+
+      <!--  service section start  -->
+      <div id="servicios" class="service-section home-2">
+         <div class="container">
+            <span class="title">Encuentra la solución perfecta para tus necesidades</span>
+            <h2 class="subtitle">Nuestros Servicios</h2>
+            <div class="service-carousel owl-carousel owl-theme">
+               <div class="single-service" onclick="window.location.href='exposicionenlinea.html';" style="cursor: pointer;">
+                  <div class="img-wrapper">
+                     <img src="{% static 'img/exposicionenlinea.png' %}" alt="">
+                  </div>
+                  <div class="service-txt">
+                     <h4 class="service-title">Exposición en Línea</h4>
+                     <p class="service-para">Consigue Clientes Potenciales a traves de la web, vende tus productos o Servicios en Linea, según tus necesidades</p>
+                     <a href="exposicionenlinea.html" class="readmore">Leer Más</a>
+                  </div>
+               </div>
+               <div class="single-service" onclick="window.location.href='asistentevirtual.html';" style="cursor: pointer;">
+                  <div class="img-wrapper">
+                     <img src="{% static 'img/Asistente Virtual.png' %}" alt="">
+                  </div>
+                  <div class="service-txt">
+                     <h4 class="service-title">Asistente Virtuales</h4>
+                     <p class="service-para">Obten un Asistente Virtual para la atención de tus Cliente con conexion a tus redes sociales. Whatsapp, Instagram, Facebook</p>
+                     <a href="asistentevirtual.html" class="readmore">Leer Más</a>
+                  </div>
+               </div>
+               <div class="single-service" onclick="window.location.href='gestiondelainformacion.html';" style="cursor: pointer;">
+                  <div class="img-wrapper">
+                     <img src="{% static 'img/basededatos.png' %}" alt="">
+                  </div>
+                  <div class="service-txt">
+                     <h4 class="service-title">Gestión de la Información</h4>
+                     <p class="service-para">Manten la Información de Negocio ordenada, segura y en Línea. Gestion de Bases de datos para recopilar o brindar Información a tus Clientes</p>
+                     <a href="gestiondelainformacion.html" class="readmore">Leer Más</a>
+                  </div>
+               </div>
+               <div class="single-service" onclick="window.location.href='desarrollospersonalizados.html';" style="cursor: pointer;">
+                  <div class="img-wrapper">
+                     <img src="{% static 'img/desarrollopersonalizado.png' %}" alt="">
+                  </div>
+                  <div class="service-txt" >
+                     <h4 class="service-title">Desarrollos Personalizados</h4>
+                     
+                     <p class="service-para">Productos digitales a Medida del Cliente. Sectores: Finanzas, Recursos Humanos, Comercial, Ventas, Administrativos  </p>
+                     <a href="desarrollospersonalizados.html" class="readmore">Leer Más</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  service section end  -->
+
+
+      <!--  about section start  -->
+      <div id='acercadeaev' class="about-section home-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5">
+                  <img class="ceo-pic" src="{% static "img/acercadenos.png" %}" alt="">
+               </div>
+               <div class="col-lg-6 offset-lg-1">
+                  <div class="comment-content">
+                     <span class="title">Algorithmic Evolution</span>
+                     <h2 class="subtitle" onclick="window.location.href='acercadeaev.html';" style="cursor: pointer;">¿Quienes Somos?</h2>
+                     <div style="text-align: justify;">
+                     <p>¡Bienvenido a nuestro mundo digital! Nos enorgullece presentarte a 
+                        los cerebros detrás de nuestras innovadoras soluciones informáticas. Conoce
+                         a los líderes que dan forma a nuestra visión y dirigen el camino hacia el futuro digital.</p>
+                     <p>En de Algorithmic Evolution., no solo ofrecemos servicios informáticos de vanguardia, sino que 
+                        también brindamos una experiencia única y personalizada. Descubre cómo nuestro equipo puede impulsar tu éxito digital. 
+                        🚀 ¡Vamos juntos hacia el futuro!</p>
+
+                        <p>Click en la imagen para conocer más...</p>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html#nicolassifakis';" style="cursor: pointer;">
+                               <img src="{% static "img/signature-2.png" %}" alt="">
+                               <h5>Nicolas Sifakis 🎨</h5>
+                               <span>Project Manager</span>
+                           </div>
+                       </div>
+                    
+                        <div class="col-md-4">
+                            <div class="ceo-details" onclick="window.location.href='acercadeaev.html#jovalsanrodriguez';" style="cursor: pointer;">
+                                <img src="{% static "img/signature-2.png" %}" alt="">
+                                <h5>Joval Rodriguez 💼</h5>
+                                <span>Key Account Manager</span>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4">
+                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html#maximobatallan';" style="cursor: pointer;">
+                                <img src="{% static "img/signature-2.png" %}" alt="">
+                                <h5>Maximo Batallan 🚀</h5>
+                                <span>Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  about section end  -->
+
+
+      <!--  features section start  -->
+      <div class="features-section home-2 border-top border-top-lg-0">
+         <div class="container">
+            <div class="row feature-content">
+               <div class="col-xl-5 offset-xl-7 col-lg-6 offset-lg-6 pr-0">
+                  <div class="features">
+                     <span class="title">Compromiso con el Cliente</span>
+                     <h2 class="subtitle">Atención Personalizada</h2>
+                     <div class="feature-lists">
+                        <div class="single-feature wow fadeInUp" data-wow-duration="1s">
+                           <div class="icon-wrapper"><i class="flaticon-customer-service"></i></div>
+                           <div class="feature-details">
+                              <h4>Soporte 24/7</h4>
+                              <p>Escribenos por whatsapp al numero +549 11-2396-5421, contestamos a la brevedad.</p>
+                           </div>
+                        </div>
+                        <div class="single-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                           <div class="icon-wrapper"><i class="flaticon-email"></i></div>
+                           <div class="feature-details">
+                              <h4>Desarrollos en tiempo y forma</h4>
+                              <p>Compromiso de cumplimiento de acuerdos preestablecidos</p>
+                           </div>
+                        </div>
+                        <div class="single-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                           <div class="icon-wrapper"><i class="flaticon-worldwide"></i></div>
+                           <div class="feature-details">
+                              <h4>Servicio Global</h4>
+                              <p>Desarrollo de Software en cualquier parte del mundo</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  features section end  -->
+
+
+      <!--   cta section start    -->
+      <div class="cta-section cta-bg">
+         <div class="container">
+            <div class="cta-container">
+               <div class="row align-items-center">
+                  <div class="col-lg-9">
+                     <h2 class="mb-lg-0 text-center text-lg-left">Potencia tus proyectos con tecnología innovadora.</h2>
+                  </div>
+                  <div class="col-lg-3 text-center text-lg-right">
+                     <a href="#formulario" class="boxed-btn"><span>Contacto</span></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="cta-overlay"></div>
+      </div>
+      <!--   cta section end    -->   
+
+
+      {% include "QA.html" %}
+
+
+   <!--   footer start    -->
+
+      {% include "footer.html" %}
+
+<!-- footer end -->
+
+      <!-- preloader section start -->
+      <div class="loader-container">
+         <span class="loader">
+         <span class="loader-inner"></span>
+         </span>
+      </div>
+      <!-- preloader section end -->
+
+
+
+
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <!-- bootstrap js -->
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <!-- owl carousel js -->
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <!-- isotope js -->
+      <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+      <!-- easyzoom js -->
+      
+      <script src="{% static 'js/lightbox.min.js' %}"></script>
+    
+     
+      <!-- slicknav js -->
+      <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+  
+      <!-- wow js -->
+      
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!-- main js -->
+      <script src="{% static 'js/main.js' %}"></script>
+      
+      {% endblock %}
+        
+
+</html>
