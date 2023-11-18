@@ -2136,6 +2136,15 @@ ul.search-cart-area {
     
 }
 
+.cta-overlay1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}  
+
 .cta-container {
     position: relative;
     z-index: 1;
