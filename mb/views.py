@@ -57,3 +57,7 @@ def exposicionenlinea(request):
 def gestiondelainformacion(request):    
     
     return render(request, 'gestiondelainformacion.html')
+
+def acercadeaev(request):    
+    
+    return render(request, 'acercadeaev.html')
