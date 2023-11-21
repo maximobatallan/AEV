@@ -53,43 +53,44 @@
                      </div>
                      <div class="offset-xl-1 col-xl-6 col-lg-6">
                         <div class="request-form">
-                           <form action="{% url 'save_formulario' %}" method="post">{% csrf_token %}
-                              <div class="row">
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="nombre" type="text" placeholder="Nombre"></div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element">
-                                       <div class="select-wrapper">
-                                          <select name="categoria">
-                                             <option value="emprendedores" selected>Emprendedores</option>
-                                             <option value="asistente_virtual">Asistente Virtual</option>
-                                             <option value="automatizacion_tareas">Automatización de tareas</option>
-                                             <option value="gestion_informacion">Gestión de la Información</option>
-                                             <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="email" type="email" placeholder="Email"></div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-element"><input name="telefono" type="text" placeholder="Teléfono"></div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia"></textarea></div>
-                                 </div>
-
-                                 <div class="col-lg-12">
-                                    <div class="form-element mb-12 text-right">
-                                        <button type="submit" class="boxed-btn">
-                                            <span>Enviar</span>
-                                        </button>
-                                    </div>         
-                                 </div>
-                              </div>
-                           </form>
+                           <form action="{% url 'save_formulario' %}" method="post">
+                              {% csrf_token %}
+                               <div class="row">
+                                  <div class="col-md-6">
+                                     <div class="form-element"><input name="nombre" type="text" placeholder="Nombre" required></div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="form-element">
+                                        <div class="select-wrapper">
+                                           <select name="categoria" required>
+                                              <option value="emprendedores" selected>Emprendedores</option>
+                                              <option value="asistente_virtual">Asistente Virtual</option>
+                                              <option value="automatizacion_tareas">Automatización de tareas</option>
+                                              <option value="gestion_informacion">Gestión de la Información</option>
+                                              <option value="desarrollos_personalizados">Desarrollos Personalizados</option>
+                                           </select>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="form-element"><input name="email" type="email" placeholder="Email" required></div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="form-element"><input name="telefono" type="text" placeholder="Teléfono" required></div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                     <div class="form-element"><textarea name="texto" cols="73" rows="10" placeholder="Escriba su consulta o sugerencia" required></textarea></div>
+                                  </div>
+                     
+                                  <div class="col-lg-12">
+                                     <div class="form-element mb-12 text-right">
+                                         <button type="submit">
+                                             <span>Enviar</span>
+                                         </button>
+                                     </div>         
+                                  </div>
+                               </div>
+                            </form>
                         </div>
                      </div>
                   </div>
@@ -155,6 +156,10 @@
       <!--  service section end  -->
 
 
+
+      
+      
+      
       <!--  about section start  -->
       <div id='acercadeaev' class="about-section home-2">
          <div class="container">
@@ -169,38 +174,40 @@
                      <div style="text-align: justify;">
                      <p>¡Bienvenido a nuestro mundo digital! Nos enorgullece presentarte a 
                         los cerebros detrás de nuestras innovadoras soluciones informáticas. Conoce
-                         a los líderes que dan forma a nuestra visión y dirigen el camino hacia el futuro digital.</p>
+                         a los integrantes de Algorithmic Evolution.</p>
                      <p>En Algorithmic Evolution, no solo ofrecemos servicios informáticos de vanguardia, sino que 
                         también brindamos una experiencia única y personalizada. Descubre cómo nuestro equipo puede impulsar tu éxito digital. 
                         🚀 </p>
                         <p>¡Vamos juntos hacia el futuro!</p>
-
-                        <p>Click en la imagen para conocer más...</p>
+                        <a href="acercadeaev.html" class="readmore">Más de Acerca de AEV...</a>
                      </div>
                      <div class="row">
                         <div class="col-md-4">
-                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html#nicolassifakis';" style="cursor: pointer;">
-                               <img src="{% static "img/signature-2.png" %}" alt="">
+                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html';" style="cursor: pointer;">
+                                <img src="{% static "img/maximobatallan1.png" %}" alt="maximobatallan">
+                                <h5>Maximo Batallan 🚀</h5>
+                                <span>Data Scientist</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html';" style="cursor: pointer;">
+                               <img src="{% static "img/nicolassifakis1.png" %}" alt="">
                                <h5>Nicolas Sifakis 🎨</h5>
                                <span>Project Manager</span>
                            </div>
                        </div>
                     
                         <div class="col-md-4">
-                            <div class="ceo-details" onclick="window.location.href='acercadeaev.html#jovalsanrodriguez';" style="cursor: pointer;">
-                                <img src="{% static "img/signature-2.png" %}" alt="">
+                            <div class="ceo-details" onclick="window.location.href='acercadeaev.html';" style="cursor: pointer;">
+                                <img src="{% static "img/jovalsanrodriguez1.png" %}" alt="">
                                 <h5>Joval Rodriguez 💼</h5>
                                 <span>Key Account Manager</span>
                             </div>
                         </div>
                     
-                        <div class="col-md-4">
-                           <div class="ceo-details" onclick="window.location.href='acercadeaev.html#maximobatallan';" style="cursor: pointer;">
-                                <img src="{% static "img/signature-2.png" %}" alt="">
-                                <h5>Maximo Batallan 🚀</h5>
-                                <span>Data Scientist</span>
-                            </div>
-                        </div>
+                        
                     </div>
                   </div>
                </div>
@@ -209,6 +216,12 @@
       </div>
       <!--  about section end  -->
 
+
+     <!--  casos de exito section start  -->
+      
+
+      {% include "casosexito.html" %}
+      <!--  casos de exito section end  -->
 
       <!--  features section start  -->
       <div class="features-section home-2 border-top border-top-lg-0">
@@ -248,6 +261,7 @@
       </div>
       <!--  features section end  -->
 
+ 
 
       <!--   cta section start    -->
       <div class="cta-section cta-bg">
