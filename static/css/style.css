@@ -99,6 +99,29 @@
 ** Global css
 ---------------------------*/
 
+
+/* Estilos predeterminados */
+.casosdeexito {
+    text-decoration: none;
+}
+
+/* Estilos para pantallas más grandes que 740px */
+@media screen and (min-width: 741px) {
+    .casosdeexito {
+        color: #ffffff;
+    }
+}
+
+/* Estilos para pantallas más pequeñas o iguales a 740px */
+@media screen and (max-width: 740px) {
+    .casosdeexito {
+        color: #183650;
+        font-weight: bold;
+    }
+}
+
+
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -2016,7 +2039,7 @@ ul.search-cart-area {
 ---------------------------*/
 
 .news-section {
-    padding: 111px 0px 114px;
+    padding: 0px 0px 114px;
 }
 
 .news-section h2.subtitle {
@@ -2033,11 +2056,6 @@ ul.search-cart-area {
     transition: .5s;
 }
 
-.single-news:hover img {
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
 
 .single-news .news-txt span {
     color: #797e82;
